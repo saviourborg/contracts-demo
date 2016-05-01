@@ -3,17 +3,17 @@
 	<head>
 		<meta charset="utf-8">
 		<title>A simple JEKYLL site</title>
+		<link href="{{site.baseurl}}/css/common.css" rel="stylesheet">
 	</head>
 	<body>
 		<header>
 			<strong>Planet JEKJLL</strong>
-			<nav>
-				<ul>
-					<li><a href="{{site.baseurl}}/index.html">HOME</a></li>
-					<li><a href="{{site.baseurl}}/news.html">NEWS</a></li>
-				</ul>
-			</nav>
+		{% include nav.html navclass='nav-top' %}
 		</header>
-		{{content}}		
+			{{content}}
+		<footer>
+			<hr />
+			{% include nav.html navclass='nav-bottom' %}
+		</footer>	
 	</body>
 </html>
